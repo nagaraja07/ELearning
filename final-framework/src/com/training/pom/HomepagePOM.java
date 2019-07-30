@@ -17,7 +17,7 @@ public class HomepagePOM {
 			this.driver = driver; 
 			PageFactory.initElements(driver, this);
 		}
-		
+		//
 		@FindBy(xpath="//a[contains(text(),'Sign up!')]")
 		private WebElement signUp;
 		

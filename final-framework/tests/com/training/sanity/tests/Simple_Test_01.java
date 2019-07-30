@@ -71,6 +71,8 @@ public class Simple_Test_01 {
 		homepagePOM.pass2M("1Sample91");
 		homepagePOM.registerM();
 		homepagePOM.SignUpSuccessValM();
+		//
+	
 	}
 	
 	
