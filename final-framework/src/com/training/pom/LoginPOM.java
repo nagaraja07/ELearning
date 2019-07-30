@@ -7,11 +7,41 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPOM {
 	private WebDriver driver; 
+
+	String msg=null;
 	
 	public LoginPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(xpath="//a[contains(text(),'Sign up!')]")
+	private WebElement signUp;
+	
+	@FindBy(name="firstname")
+	private WebElement fstName;
+	
+	@FindBy(name="lastname")
+	private WebElement lstName;
+
+	@FindBy(name="email")
+	private WebElement eMail;
+
+	@FindBy(name="username")
+	private WebElement usrName;
+
+	@FindBy(name="pass1")
+	private WebElement pas1;
+
+	@FindBy(name="pass2")
+	private WebElement pas2;
+
+	@FindBy(name="phone")
+	private WebElement phone;
+	
+	@FindBy(xpath="//div/p[contains(text(),'Dear')]")
+	private WebElement signUpMsg;
+	
 	
 	@FindBy(id="login")
 	private WebElement userName; 
@@ -21,7 +51,6 @@ public class LoginPOM {
 	
 	@FindBy(id="formLogin_submitAuth")
 	private WebElement loginBtn; 
-	
 	
 	public void sendUserName(String userName) {
 		this.userName.clear();
@@ -35,5 +64,9 @@ public class LoginPOM {
 	
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
-	}
+	} 
+	
+	
+	
+	
 }
